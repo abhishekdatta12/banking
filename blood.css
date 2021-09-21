@@ -1,0 +1,114 @@
+html{
+    background-color: rgb(255, 215, 218);
+    background-image: linear-gradient(pink, hotpink);
+}
+/*.gradient{
+    background: linear-gradient(to bottom, #ffccff 0%, #ff0000 100%);
+}*/
+.center{
+	text-align: center;
+}
+body{
+	background-image: linear-gradient(pink, hotpink);
+}
+table{
+	align-self: center;
+	border-style:solid;
+	/*border-width:10px;*/
+	text-align: center;
+	align-content: center;
+	border-color: grey;
+    margin-left:auto; 
+    margin-right:auto;
+    border-collapse: collapse;
+	font-family: serif;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	border-radius: 10px 10px 10px 10px;
+	overflow: hidden;
+}
+
+table th{
+	background-color: #a6111f;
+	color: #ffffff;
+}
+
+table tr{
+	border-bottom: 2px solid black;
+}
+
+table th,
+table td{
+	padding: 12px 15px;
+}
+
+table tr:last-of-type{
+	border-bottom: 2px solid #a6111f;
+}
+
+table tr.active-row{
+	font-weight: bold;
+	color: #a6111f;
+}
+table tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+
+nav{
+	width: 100%;
+}
+nav li
+{
+    margin-left:auto; 
+    margin-right:auto;
+    list-style: none;
+    float: left;
+
+}
+nav ul
+{
+    margin:0;
+    padding:0;
+}
+.topnav {
+  background-color: #eb8888;
+  overflow: hidden;
+  font-family: serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #c45252;
+  color: white;
+}
+.buttons{
+  /*background-color: #4CAF50;  Green background */
+  /*border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+}
+button{
+	padding: 10px 24px;
+	border-radius: 5px;
+	font-size: 100%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	margin: 0px 50px;
+}
