@@ -1,100 +1,129 @@
-<?php
-	include_once 'includes/dbh.inc.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Staff Details
-	</title>
-	<link rel="stylesheet" href="donor.css">
-	
+	<meta charset="utf-8">
+	<title>Bank Application</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		*{
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    font-family: 'Reem Kufi', sans-serif;
+		}
+		body{
+			background: #BBF3FF;
+		}
+		.top-bar{
+			background: #0A5666;
+			height: 175px;
+			color: white;
+			text-align: center;
+		}
+
+		.pick{
+			text-align: center;
+			color: black;
+		}
+
+		.box1{
+			background-image: url("cust.jpg");
+			background-size: cover;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			border-radius: 11px;
+			border: solid black 4px;
+		}
+
+		.box2{
+			background-image: url("trans.jpg");
+			background-size: cover;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			border-radius: 11px;
+			border: solid black 4px;
+		}
+
+		.box3{
+			background-image: url("about.jpg");
+			background-size: cover;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			border-radius: 11px;
+			border: solid black 4px;
+		}
+
+		.title{
+			font-size: 60;
+		}
+
+		.options{
+			margin-left: 200px;
+			margin-right: 200px;
+			display: flex;
+  			justify-content: space-between;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		a:visited{
+			color: black;
+		}
+
+		.footer{
+			background: #0A5666;
+			height: 55px;
+			color: white;
+			text-align: center;
+		}
+		/*.trans{
+			background-color: red;
+			background-size: cover;
+		}*/
+	</style>
 </head>
 <body>
-	<div class="gradient">
-<!--	<div class="menu">
-        <nav>
-            <ul>
-                <li><a href="#">Staff Details</a></li>
-                <li><a href="#">Donor Details</a></li>
-                <li><a href="#">Recipient Details</a></li>
-                <li><a href="#">Bloodbag Inventory</a></li>
-            </ul>
-        </nav>
-    </div>-->
-    <h1 align="center" style="font-family: sans-serif; size: 70px"> BLOOD BANK MANAGEMENT SYSTEM</h1>
-    <div class="topnav">
-  		<a class="active" href="index.php">Staff Details</a>
-  		<a href="Donor.php">Donor Details</a>
-  		<a href="Recipient.php">Recipient Details</a>
-  		<a href="Bloodbag.php">Bloodbag Inventory</a>
-  		<a href="Track.php">Tracking</a>
-  		<div class="Logout"><a href="log.php" style="float: right; background: #085b85;">Logout</a></div>
+
+	<div class="top-bar">
+		<br>
+		<h3>The Sparks Foundation</h3>
+		<h4>Web Development Task  &nbsp; 1</h4>
+		<h1>Basic Banking App</h1>
+		<h4>By Abhishek Datta</h4>
 	</div>
-    <br>
-    <br>
-    <br>
-    <div class="center">
-    <h1 align="center" style="font-family: sans-serif;">STAFF DETAILS</h3>
-	<div class="content-table">
-	<?php
-		$sql="Select * from Staff;";
-		$result = mysqli_query($conn, $sql);
-		
-		$resultCheck= mysqli_num_rows($result);
-		if($resultCheck>0){
-			echo "<table border='1'>
-				<tr>
-				<th>EmployeeID</th>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Phone</th>
-				<th>Salary</th>
-				<th>Address</th>
-				</tr>";
-			while($row = mysqli_fetch_assoc($result)){
-				echo "<tr>";
-	  			echo "<td>" . $row['Emp_ID'] . "</td>";
-				echo "<td>" . $row['Name'] . "</td>";
-				echo "<td>" . $row['Emp_Description'] . "</td>";
-				echo "<td>" . $row['Phone_No'] . "</td>";
-				echo "<td>" . $row['Salary'] . "</td>";
-				echo "<td>" . $row['Address'] . "</td>";
-				echo "</tr>";
-			}
-		}
-	?>
-	<button class="GFG" 
-    onclick="window.location.href = 'staff/staffinsert.php';"> 
-        Insert
-    </button> 
-    <button class="GFG" 
-    onclick="window.location.href = 'staff/staffupdate1.php';"> 
-        Update
-    </button> 
-    <button class="GFG" 
-    onclick="window.location.href = 'staff/staffdelete.php';"> 
-        Delete
-    </button> 
-	<div class="buttons">
-	<!--
-	<div class="buttons">
-	<form method="get" action="staff/staffinsert.php">
-		<button>Insert</button>
-	</form>
-	<br>
-	<form method="get" action="staff/staffupdate1.php">
-		<button>Update</button>
-	</form>
-	<br>
-	<form method="get" action="staff/staffdelete.php">        
-		<button>Delete</button>
-	</form>
-	</div>-->
-	<br>
-</div>
-</div>
-</div>
+
+	<div class="pick"><br><br><h1>Pick an option:<h1></div>
+
+	<br><br>
+	<div class="options">
+		<div class="box1">
+			<div class="list">
+				<div class="title"><br><a href="Donor.php"><h2>Customer List</h2></a></div>
+			</div>
+		</div>
+		<div class="box2">
+			<div class="trans">
+				<div class="title"><br><a href="Recipient.php"><h2>Transaction List</a></h2></div>
+			</div>
+		</div>
+		<div class="box3">
+			<div class="about">
+				<div class="title"><br><h2>About Us</h2></div>
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+	<div class="footer"><br>
+		<p>For more info, go to <u>https://www.thesparksfoundationsingapore.org/</u></p>
+	</div>
 </body>
 </html>
